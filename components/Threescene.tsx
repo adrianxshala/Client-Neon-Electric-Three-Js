@@ -134,7 +134,7 @@ export default function HeroSection() {
       </div>
 
       {/* Canvas for the 3D model */}
-      <div className="absolute w-full h-full pb-20 md:pb-1">
+      <div className="absolute w-full h-[80%] pb-20 mt-[-300px] md:pb-1">
         <Canvas camera={{ position: cameraPosition, fov }}>
           <ambientLight intensity={2} />
           <directionalLight position={[1, 1, 1]} intensity={2} />

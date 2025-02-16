@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 
+
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -19,11 +21,15 @@ export default function Home() {
 
       {/* Navbar */}
       <Navbar />
-      <HeroSection />
-      {/* Features Section */}
-      <Features />
 
       {/* Hero Section */}
+      <HeroSection />
+
+      {/* BlurText Animation */}
+   
+
+      {/* Features Section */}
+      <Features />
 
       {/* Electric Material Slider */}
       <ElectricMaterialSlider />
