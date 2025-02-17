@@ -10,9 +10,6 @@ import Navbar from "@/components/Navbar";
 import ScrollVelocity from "@/components/ScrollV";
 import RollingGallery from "@/components/Img";
 
-
-
-
 export default function Home() {
   const velocity = 25;
   return (
@@ -34,9 +31,8 @@ export default function Home() {
         className="custom-scroll-text text-gray-300"
       />
 
-<RollingGallery autoplay={true} pauseOnHover={true} />
+      <RollingGallery autoplay={true} pauseOnHover={true} />
       {/* BlurText Animation */}
-   
 
       {/* Features Section */}
       <Features />
