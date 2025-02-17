@@ -7,11 +7,13 @@ import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ScrollVelocity from "@/components/ScrollV";
 
 
 
 
 export default function Home() {
+  const velocity = 9;
   return (
     <div className="min-h-screen">
       {/* Space Background */}
@@ -24,6 +26,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      <ScrollVelocity
+        texts={["Neon Electric", "Electric Neon"]}
+        velocity={velocity} // ✅ Tani është e definuar
+        className="custom-scroll-text"
+      />
 
       {/* BlurText Animation */}
    
