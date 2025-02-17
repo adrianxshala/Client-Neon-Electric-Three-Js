@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ScrollVelocity from "@/components/ScrollV";
+import RollingGallery from "@/components/Img";
 
 
 
@@ -33,6 +34,7 @@ export default function Home() {
         className="custom-scroll-text text-gray-300"
       />
 
+<RollingGallery autoplay={true} pauseOnHover={true} />
       {/* BlurText Animation */}
    
 
