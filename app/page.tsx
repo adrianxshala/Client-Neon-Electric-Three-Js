@@ -13,7 +13,7 @@ import ScrollVelocity from "@/components/ScrollV";
 
 
 export default function Home() {
-  const velocity = 9;
+  const velocity = 25;
   return (
     <div className="min-h-screen">
       {/* Space Background */}
@@ -30,7 +30,7 @@ export default function Home() {
       <ScrollVelocity
         texts={["Neon Electric", "Electric Neon"]}
         velocity={velocity} // ✅ Tani është e definuar
-        className="custom-scroll-text"
+        className="custom-scroll-text text-gray-300"
       />
 
       {/* BlurText Animation */}
