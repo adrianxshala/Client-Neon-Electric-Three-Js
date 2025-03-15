@@ -65,7 +65,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ delay: 1.5, duration: 0.6 }} // Adjusted timing for smoother sequencing
-        className="mt-4 text-base md:text-lg text-gray-300 max-w-2xl" // Adjusted font size for mobile
+        className="mt-4  md:text-lg text-gray-300 max-w-2xl" // Adjusted font size for mobile
       >
        Zgjidhje inovative elektrike të dizajnuara për efikasitet, qëndrueshmëri dhe performancë.
       </motion.p>

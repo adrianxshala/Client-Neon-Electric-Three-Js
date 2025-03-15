@@ -89,7 +89,7 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <a href="tel:+38349153002">
+          <a href="tel:+38344184178">
             <Button
               size="lg"
               className="bg-blue-500 hover:bg-blue-600 text-white text-lg font-medium rounded-xl shadow-lg moving-border"

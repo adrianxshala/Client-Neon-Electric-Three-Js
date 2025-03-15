@@ -116,56 +116,76 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   };
 
   return (
-    <div className="relative h-[500px] w-full overflow-hidden">
-      <div
-        className="absolute top-0 left-0 h-full w-[48px] z-10"
-        style={{
-          background:
-            "linear-gradient(to left, rgba(0,0,0,0) 0%, #060606 100%)",
-        }}
-      />
-      <div
-        className="absolute top-0 right-0 h-full w-[48px] z-10"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)",
-        }}
-      />
-      <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
-        <motion.div
-          drag="x"
-          dragElastic={0}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          animate={controls}
-          onUpdate={handleUpdate}
+    <div>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-4xl font-bold  text-center glow"
+      >
+        Partnerët Tanë
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className=" text-gray-400  text-center  p-2"
+      >
+        Ne bashkëpunojmë me markat më të njohura në industri për t'ju ofruar
+      </motion.p>
+      <div className="relative h-[500px] w-full overflow-hidden">
+        <div
+          className="absolute top-0 left-0 h-full w-[48px] z-10"
           style={{
-            transform: transform,
-            rotateY: rotation,
-            width: cylinderWidth,
-            transformStyle: "preserve-3d",
+            background:
+              "linear-gradient(to left, rgba(0,0,0,0) 0%, #060606 100%)",
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
-        >
-          {galleryImages.map((url, i) => (
-            <div
-              key={i}
-              className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
-              style={{
-                width: `${faceWidth}px`,
-                transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`,
-              }}
-            >
-              <img
-                src={url}
-                alt="gallery"
-                className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover transition-transform duration-300 ease-out group-hover:scale-105 sm:h-[100px] sm:w-[220px]"
-              />
-            </div>
-          ))}
-        </motion.div>
+        />
+        <div
+          className="absolute top-0 right-0 h-full w-[48px] z-10"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)",
+          }}
+        />
+        <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
+          <motion.div
+            drag="x"
+            dragElastic={0}
+            onDrag={handleDrag}
+            onDragEnd={handleDragEnd}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            animate={controls}
+            onUpdate={handleUpdate}
+            style={{
+              transform: transform,
+              rotateY: rotation,
+              width: cylinderWidth,
+              transformStyle: "preserve-3d",
+            }}
+            className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          >
+            {galleryImages.map((url, i) => (
+              <div
+                key={i}
+                className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+                style={{
+                  width: `${faceWidth}px`,
+                  transform: `rotateY(${
+                    (360 / faceCount) * i
+                  }deg) translateZ(${radius}px)`,
+                }}
+              >
+                <img
+                  src={url}
+                  alt="gallery"
+                  className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover transition-transform duration-300 ease-out group-hover:scale-105 sm:h-[100px] sm:w-[220px]"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );

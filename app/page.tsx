@@ -22,13 +22,14 @@ export default function Home() {
       {/* Navbar */}
       <Navbar />
       <Hero />
+      <RollingGallery autoplay={true} pauseOnHover={true} />
       <ScrollVelocity
         texts={["Neon Electric", "Electric Neon"]}
         velocity={velocity} // ✅ Tani është e definuar
         className="custom-scroll-text text-gray-300"
       />
 
-      <RollingGallery autoplay={true} pauseOnHover={true} />
+     
 
       {/* Features Section */}
       <Features />
