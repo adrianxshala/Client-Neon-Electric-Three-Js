@@ -84,7 +84,7 @@ export default function HeroSection() {
         </Button>
       </motion.div>
      </div>
-    <div className=''>
+    <div className='w-full'>
     <ScrollVelocity
         texts={["Neon Electric", "Electric Neon"]}
         velocity={velocity} // ✅ Tani është e definuar
