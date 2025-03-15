@@ -31,7 +31,7 @@ const neonTextVariants = {
 };
 
 export default function HeroSection() {
-  const text = 'Powering the Future with '; // Text before Neon Electric
+  const text = 'Powering the Future  '; // Text before Neon Electric
   const neonText = 'Neon Electric'; // Neon Electric part
 
   return (
@@ -55,7 +55,7 @@ export default function HeroSection() {
         initial="hidden"
         animate="visible"
         variants={neonTextVariants}
-        className="text-blue-400 text-4xl md:text-6xl lg:text-7xl font-bold" // Made neonText larger
+        className="text-blue-400 text-5xl md:text-6xl lg:text-7xl font-bold pt-4" // Made neonText larger
       >
         {neonText}
       </motion.span>
@@ -67,7 +67,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5, duration: 0.6 }} // Adjusted timing for smoother sequencing
         className="mt-4 text-base md:text-lg text-gray-300 max-w-2xl" // Adjusted font size for mobile
       >
-        Innovative electrical solutions designed for efficiency, sustainability, and performance.
+       Zgjidhje inovative elektrike të dizajnuara për efikasitet, qëndrueshmëri dhe performancë.
       </motion.p>
 
       {/* Button Animation */}
