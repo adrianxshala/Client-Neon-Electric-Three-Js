@@ -10,8 +10,10 @@ import image5 from "../public/assets/5.webp";
 import image6 from "../public/assets/6.avif";
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <Card key={index} card={card} index={index} />
   ));
+   
+  
 
   return (
     <div className="w-full h-full py-20">
