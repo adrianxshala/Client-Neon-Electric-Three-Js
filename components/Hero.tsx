@@ -38,7 +38,7 @@ export default function HeroSection() {
   return (
     <section className="w-full h-screen flex flex-col items-center justify-around text-center px-6">
       {/* Main Text Animation */}
-     <div className=''>
+     <div className='pb-28 pt-40'>
      <motion.h1
         initial="hidden"
         animate="visible"
