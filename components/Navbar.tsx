@@ -1,87 +1,55 @@
-import React from "react";
-import {  useState } from "react";
-import {  CloudLightning as Lightning, Menu } from "lucide-react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar fixed w-full z-50 top-0">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center ">
-            {/* Korrigjimi i src të logos */}
-            <a href="/">
-              <img src="/assets/logo.png" alt="ElectroTech"  className="w-12" />
-            </a>
-          </div>
+    <>
+      <nav className="fixed w-full z-50 top-0 backdrop-blur-lg shadow-md bg-black/80">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          {/* Logo */}
+          <a href="/">
+            <img src="/assets/logo.png" alt="ElectroTech" className="w-12" />
+          </a>
 
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="w-6 h-6" />
+          {/* Hamburger Menu */}
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#about"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#products"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Products
-            </a>
-            <a
-              href="#features"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Contact
-            </a>
+            <a href="#about" className="text-gray-300 hover:text-white transition">About</a>
+            <a href="#products" className="text-gray-300 hover:text-white transition">Products</a>
+            <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
+            <a href="#contact" className="text-gray-300 hover:text-white transition">Contact</a>
           </div>
         </div>
+      </nav>
 
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4">
-            <a
-              href="#about"
-              className="block text-gray-300 hover:text-white transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#products"
-              className="block text-gray-300 hover:text-white transition-colors"
-            >
-              Products
-            </a>
-            <a
-              href="#features"
-              className="block text-gray-300 hover:text-white transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#contact"
-              className="block text-gray-300 hover:text-white transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-        )}
-      </div>
-    </nav>
+      {/* Sidebar Navigation */}
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: isOpen ? 0 : "-100%" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="fixed top-16 w-64 z-50 h-screen bg-black bg-opacity-30 backdrop-blur-md shadow-lg p-6 md:hidden"
+
+      >
+      
+        <nav className="flex flex-col space-y-6 mt-10">
+          <a href="#about" className="text-gray-300 hover:text-white transition">About</a>
+          
+          <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
+          <a href="#contact" className="text-gray-300 hover:text-white transition">Contact</a>
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white  text-lg font-medium rounded-xl shadow-lg moving-border">
+          Call us
+        </Button>
+        </nav>
+      </motion.div>
+    </>
   );
 };
 

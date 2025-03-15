@@ -9,6 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       fontFamily: {
         orbitron: ['"Orbitron"', 'sans-serif'],
       },

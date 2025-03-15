@@ -1,6 +1,5 @@
 "use client";
-import ElectricMaterialSlider from "@/components/Slider";
-import HeroSection from "@/components/Threescene";
+
 import Features from "@/components/Features";
 import About from "@/components/About";
 import Products from "@/components/Products";
@@ -9,6 +8,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ScrollVelocity from "@/components/ScrollV";
 import RollingGallery from "@/components/Img";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   const velocity = 25;
@@ -21,10 +21,7 @@ export default function Home() {
 
       {/* Navbar */}
       <Navbar />
-
-      {/* Hero Section */}
-      <HeroSection />
-
+      <Hero />
       <ScrollVelocity
         texts={["Neon Electric", "Electric Neon"]}
         velocity={velocity} // ✅ Tani është e definuar
@@ -32,13 +29,9 @@ export default function Home() {
       />
 
       <RollingGallery autoplay={true} pauseOnHover={true} />
-      {/* BlurText Animation */}
 
       {/* Features Section */}
       <Features />
-
-      {/* Electric Material Slider */}
-      <ElectricMaterialSlider />
 
       {/* About Section */}
       <About />

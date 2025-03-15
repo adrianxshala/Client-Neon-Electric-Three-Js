@@ -4,15 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
-import logo from "../public/assets/logo.png"
-import {
-  Zap,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  
-} from "lucide-react";
+import logo from "../public/assets/logo.png";
+import { Facebook, Instagram } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -24,7 +17,7 @@ const Footer = () => {
     <footer className="py-12 relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
+          <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
             <Image src={logo} alt="ElectroTech Logo" width={100} height={50} />
           </motion.div>
 
@@ -62,16 +55,25 @@ const Footer = () => {
           <motion.div variants={fadeInUp} initial="hidden" whileInView="visible">
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  <Icon className="w-6 h-6" />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://www.facebook.com/N.T.P.NEON"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                whileHover={{ scale: 1.2 }}
+              >
+                <Facebook className="w-6 h-6" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.instagram.com/neon.electric_/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                whileHover={{ scale: 1.2 }}
+              >
+                <Instagram className="w-6 h-6" />
+              </motion.a>
             </div>
           </motion.div>
         </div>

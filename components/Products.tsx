@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 const products = [
   {
-    icon: <Cable className="w-12 h-12 text-blue-500" />,
+    icon: <Cable className="w-12 h-12" />,
     title: "Electrical Cables",
     description: "High-quality cables for residential and industrial use",
   },
@@ -33,6 +33,11 @@ const products = [
     icon: <Power className="w-8 h-8" />,
     title: "Power Distribution",
     description: "Complete power management solutions",
+  },
+  {
+    icon: <Cable className="w-8 h-8" />,
+    title: "Electrical Cables",
+    description: "High-quality cables for residential and industrial use",
   },
 ];
 
