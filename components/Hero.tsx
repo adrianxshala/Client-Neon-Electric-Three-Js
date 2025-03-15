@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-
+import ScrollVelocity from './ScrollV';
+const velocity = 25;
 const letterVariants = {
   hidden: { opacity: 0, filter: 'blur(5px)' },
   visible: {
@@ -35,9 +36,10 @@ export default function HeroSection() {
   const neonText = 'Neon Electric'; // Neon Electric part
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center text-center px-6">
+    <section className="w-full h-screen flex flex-col items-center justify-between text-center px-6">
       {/* Main Text Animation */}
-      <motion.h1
+     <div className='pt-48'>
+     <motion.h1
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -81,6 +83,14 @@ export default function HeroSection() {
           Get Started
         </Button>
       </motion.div>
+     </div>
+    <div className=''>
+    <ScrollVelocity
+        texts={["Neon Electric", "Electric Neon"]}
+        velocity={velocity} // ✅ Tani është e definuar
+        className="custom-scroll-text text-gray-300 "
+      />
+    </div>
     </section>
   );
 }
