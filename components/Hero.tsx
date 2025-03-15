@@ -36,9 +36,9 @@ export default function HeroSection() {
   const neonText = 'Neon Electric'; // Neon Electric part
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-between text-center px-6">
+    <section className="w-full h-screen flex flex-col items-center justify-around text-center px-6">
       {/* Main Text Animation */}
-     <div className='pt-48'>
+     <div className=''>
      <motion.h1
         initial="hidden"
         animate="visible"
